@@ -23,14 +23,16 @@ The AI coding session only starts at step 4. Everything before that is the axe-s
 
 ## What's in this repo
 
-### Skills for Claude
+### Skills
 
-Claude skills are instruction files you can drop into a Claude Project to give it a specific job. Upload the `.skill` file to your project and Claude will follow it automatically.
+Each skill comes in two formats. Use whichever fits your tool:
 
-| Skill | What it does |
-|---|---|
-| [`prd-first.skill`](./prd-first.skill) | Interviews you and writes a tight PRD optimized for AI coding tools |
-| [`master-prompt.skill`](./master-prompt.skill) | Takes your PRD + Design System and generates a complete agent briefing |
+| Skill | Claude Projects | Codex / Cursor / Claude Code | What it does |
+|---|---|---|---|
+| PRD | [`prd-first.skill`](./prd-first.skill) | [`prd-first.md`](./prd-first.md) | Interviews you and writes a tight PRD optimized for AI coding tools |
+| Master Prompt | [`master-prompt.skill`](./master-prompt.skill) | [`master-prompt.md`](./master-prompt.md) | Takes your PRD + Design System and generates a complete agent briefing |
+
+`.skill` files are for Claude Projects (drag and drop into your project). `.md` files are plain markdown you can use with any AI coding tool.
 
 ### Useful links
 
@@ -53,7 +55,7 @@ Skills are plain text instruction files. You give them to an AI agent alongside 
 
 ### Step 1 — Write your PRD
 
-Upload `prd-first.skill` to Codex together with a short description of your idea. Say:
+Upload `prd-first.md` (or `.skill` for Claude) together with a short description of your idea. Say:
 
 > *"Use the prd-first skill to write a PRD for my app"*
 
@@ -65,7 +67,7 @@ Pull your tokens from Figma or write them by hand. Keep it in a single file — 
 
 ### Step 3 — Generate the Master Prompt
 
-Upload `master-prompt.skill` + your PRD + your Design System to Codex. Say:
+Upload `master-prompt.md` (or `.skill` for Claude) + your PRD + your Design System to Codex. Say:
 
 > *"Use the master-prompt skill to write a master prompt for my app"*
 
